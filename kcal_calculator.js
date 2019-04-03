@@ -2,21 +2,21 @@
 
 function harrisBenedict (sex, age, mass, height, activity) {
     if (sex == 'M') {
-        ree = 66.5 + 13.75*mass + 5.003*height - 6.755*age
+        ree = 66.5 + 13.75*mass + 5.003*height - 6.755*age;
     } else {
-        ree = 655.1 + 9.563*mass + 1.85*height - 4.676*age
+        ree = 655.1 + 9.563*mass + 1.85*height - 4.676*age;
     };
     return ree*activity;
-}
+};
 
 function mifflinStJeor (sex, age, mass, height, activity) {
     if (sex == 'M') {
-        ree = 10*mass + 6.25*height - 5*age + 5
+        ree = 10*mass + 6.25*height - 5*age + 5;
     } else {
-        ree = 10*mass + 6.25*height - 5*age -161
+        ree = 10*mass + 6.25*height - 5*age -161;
     };
     return ree*activity;
-}
+};
 
 //callback function
 
@@ -35,6 +35,7 @@ function calculate() {
     let sexInput = document.querySelector('#sex_inp').value;
     let actInput = document.querySelector ('#act_inp').value;
     let forInput = document.querySelector('#formula_select').value;
+    let tee = 0;
 
     if ((massInput < 1) || (heightInput < 1) || (massInput > 700) || (heightInput > 300) || (ageInput <= 0)) {
         const err = document.createElement('section');
@@ -50,15 +51,15 @@ function calculate() {
        document.body.appendChild(warning);
       } else {
         if (forInput == 'Harris-Benedict') {
-            tee = harrisBenedict(sexInput, ageInput, massInput, heightInput, actInput);
+           tee = harrisBenedict(sexInput, ageInput, massInput, heightInput, actInput);
         } else {
-            tee = mifflinStJeor(sexInput, ageInput, massInput, heightInput, actInput);
-        }
+           tee = mifflinStJeor(sexInput, ageInput, massInput, heightInput, actInput);
         };
         const res = document.createElement('section');
-        res.textContent = 'Your daily energy needs are aproximately ' + tee.toFixed(1) + ' kcal.';
+        res.textContent = 'Your daily energy needs are aproximately ' + tee.toFixed(0) + ' kcal.';
         res.className = 'result';
         document.body.appendChild(res);
+    };
 }; 
 
 //button - event listener
