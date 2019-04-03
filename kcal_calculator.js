@@ -45,7 +45,7 @@ function calculate() {
         document.body.appendChild(err);
       } else if (ageInput < 15) {
        const warning = document.createElement('section');
-       warning.textContent = 'These formulas are not adequate for calculating the daily calorie needs for children under 15 years.';
+       warning.textContent = 'These formulas are not an adequate tool for calculating the daily calorie needs for children under 15 years.';
        warning.className = 'result';
        warning.id = 'warning';
        document.body.appendChild(warning);

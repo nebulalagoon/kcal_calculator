@@ -1,29 +1,24 @@
 body {
-  background-color: #9e9289;
+  background-color: #d2dbe3;
   font-family: "Poppins", "Courier", "sans";
+  font-weight: normal;
 }
 
 body > * {
-  background-color: #e7e2d8;
+  background-color: #f2f4f7;
   border-style: none;
-  color: #222222;
-  box-shadow: 3px 3px 1px #3f3123;
-  max-width: 350px;
-  padding: 10px;
-  margin-left: 5vw;
-  margin-right: 5vw;
+  color: #1c1c24;
+  box-shadow: 3px 3px 1px #556;
 }
 
 h1 {
   text-align: center;
   font-weight: bold;
-  font-size: 27px;
 }
 
 #input, .result {
   margin-top: 10px;
   margin-bottom: 20px;
-  font-weight: normal;
   font-size: 1.4rem;
 }
 
@@ -38,7 +33,7 @@ input, select {
   margin: 5px;
   border-radius: 3px;
   border-style: solid;
-  border-color: #777777;
+  border-color: #556;
   border-width: 2px;
 }
 
@@ -46,18 +41,10 @@ input, select {
   width: 80%;
 }
 
-input:hover, select:hover {
-  border-color: #77ceb1;
-}
-
-input:invalid, select:invalid {
-  border-color: red;
-}
-
 button {
-  background-color: #555555;
+  background-color: #1c1c24;
   border: none;
-  color: #d7dbe2;
+  color: #f2f4f7;
   text-align: center;
   font-weight: bold;
   font-size: 1.4rem;
@@ -68,8 +55,24 @@ button {
   margin: 0 auto;
 }
 
+.result {
+  text-align: center;
+  font-weight: bold;
+}
+
+#error, #warning {
+  background-color: rgba(136, 17, 0, 0.5);
+  border: none;
+  color: #1c1c24;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 10px;
+  font-family: "Poppins", "Courier", "sans";
+}
+
 button:hover {
-  background-color: #669988;
+  background-color: #878;
   cursor: pointer;
 }
 
@@ -81,20 +84,12 @@ label:hover {
   cursor: pointer;
 }
 
-.result {
-  text-align: center;
-  font-weight: bold;
+input:hover, select:hover {
+  border-color: #878;
 }
 
-#error, #warning {
-  background-color: #555555;
-  border: none;
-  color: #d7dbe2;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.3rem;
-  padding: 10px;
-  font-family: "Poppins", "Courier", "sans";
+input:invalid, select:invalid {
+  border-color: #810;
 }
 
 /*# sourceMappingURL=kcal_style.css.map */

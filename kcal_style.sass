@@ -1,29 +1,35 @@
-body 
-  background-color: #9e9289
-  font-family: "Poppins", "Courier", "sans"
+//variables
 
+$font-stack: "Poppins", "Courier", "sans"
+
+$font-color: #1c1c24
+$background-color: #d2dbe3
+$primary-color: #f2f4f7
+$secondary-color: #556
+$accent-color: #878
+$shadow-color: #556
+$error-color: #810
+
+//basic looks  
+body 
+  background-color: $background-color
+  font-family: $font-stack
+  font-weight: normal
 
 body > * 
-  background-color: #e7e2d8
+  background-color: $primary-color
   border-style: none
-  color: #222222
-  box-shadow: 3px 3px 1px #3f3123
-  max-width: 350px
-  padding: 10px
-  margin-left: 5vw
-  margin-right: 5vw
-
+  color: $font-color
+  box-shadow: 3px 3px 1px $shadow-color
 
 h1 
   text-align: center
   font-weight: bold
-  font-size: 27px
-
 
 #input, .result 
   margin-top: 10px
   margin-bottom: 20px
-  font-weight: normal
+
   font-size: 1.4rem
 
 
@@ -38,58 +44,60 @@ input, select
   margin: 5px
   border-radius: 3px
   border-style: solid
-  border-color: #777777
+  border-color: $secondary-color
   border-width: 2px
 
 #act_inp, #formula_select
     width: 80%
 
-
-input:hover, select:hover 
-  border-color: #77ceb1
-
-
-input:invalid, select:invalid 
-  border-color: red
-
-
 button 
-  background-color: #555555
+  background-color: $font-color
   border: none
-  color: #d7dbe2
+  color: $primary-color
   text-align: center
   font-weight: bold
   font-size: 1.4rem
   width: 150px
   padding: 4px 17px
-  font-family: "Poppins", "Courier", "sans"
+  font-family: $font-stack
   display: block
   margin: 0 auto
-
-
-button:hover 
-  background-color: #669988
-  cursor: pointer
-
-  
-#age:hover, #mass:hover, #height:hover 
-  cursor: text
-
-
-label:hover 
-  cursor: pointer
-
 
 .result 
   text-align: center
   font-weight: bold
 
 #error, #warning 
-  background-color: #555555
+  background-color: fade-out($error-color, 0.5)
   border: none
-  color: #d7dbe2
+  color: $font-color
   text-align: center
   font-weight: bold
   font-size: 1.3rem
   padding: 10px
-  font-family: "Poppins", "Courier", "sans"
+  font-family: $font-stack
+
+//hover, cursors etc.
+
+button:hover 
+  background-color: $accent-color
+  cursor: pointer
+ 
+#age:hover, #mass:hover, #height:hover 
+  cursor: text
+
+label:hover 
+  cursor: pointer
+
+input:hover, select:hover 
+  border-color: $accent-color
+
+input:invalid, select:invalid 
+  border-color: $error-color
+
+//sizing and composition
+
+body > * 
+
+h1 
+
