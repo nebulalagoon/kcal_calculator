@@ -26,29 +26,12 @@ h1
   text-align: center
   font-weight: bold
 
-#input, .result 
-  margin-top: 10px
-  margin-bottom: 20px
-
-  font-size: 1.4rem
-
-
-div 
-  padding: 10px
-
-
 input, select 
-  font-size: 1.2rem
-  width: 30%
-  padding: 5px
-  margin: 5px
   border-radius: 3px
   border-style: solid
-  border-color: $secondary-color
+  border-color: fade-out($secondary-color, 0.2)
   border-width: 2px
-
-#act_inp, #formula_select
-    width: 80%
+  font-family: $font-stack
 
 button 
   background-color: $font-color
@@ -56,25 +39,18 @@ button
   color: $primary-color
   text-align: center
   font-weight: bold
-  font-size: 1.4rem
-  width: 150px
-  padding: 4px 17px
   font-family: $font-stack
-  display: block
-  margin: 0 auto
 
 .result 
   text-align: center
   font-weight: bold
 
 #error, #warning 
-  background-color: fade-out($error-color, 0.5)
+  background-color: fade-out($error-color, 0.7)
   border: none
   color: $font-color
   text-align: center
   font-weight: bold
-  font-size: 1.3rem
-  padding: 10px
   font-family: $font-stack
 
 //hover, cursors etc.
@@ -97,7 +73,67 @@ input:invalid, select:invalid
 
 //sizing and composition
 
+body
+  height: 100%
+  width: 100%
+  overflow: hidden
+
 body > * 
+  box-sizing: border-box
+  margin: 7px auto
+  width: 90%
+  max-width: 700px
 
 h1 
+  font-size: 1.9rem
+  padding: 5px 0px
+  margin-top: 20px
+  margin-bottom: 25px
+
+div 
+  padding: 10px
+
+#input, .result 
+  font-size: 1.2rem
+  padding: 10px
+
+#input
+  margin-top: 10px
+
+.result
+  margin-top: 20px
+
+input, select 
+  font-size: 1rem
+  padding: 0px 5px
+  margin-left: 3px
+
+#sex, #mass, #age, #height
+  display: inline
+  line-height: 55px
+  @media only screen and (max-width: 520px)
+    display: block
+    line-height: 30px
+    br 
+      display: none
+
+#sex_inp, #age_inp, #mass_inp, #height_inp
+  max-width: 50px
+
+#act_inp
+  width: 280px
+
+#formula_select
+  width: 175px
+
+button 
+  font-size: 1rem
+  width: 130px
+  padding: 4px 17px
+  display: block
+  margin: 10px auto
+
+#error, #warning 
+  font-size: 1.3rem
+  padding: 10px
 
