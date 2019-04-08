@@ -104,8 +104,8 @@ body > * {
 h1 {
   font-size: 1.9rem;
   padding: 5px 0px;
-  margin-top: 20px;
-  margin-bottom: 25px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 div {
@@ -119,10 +119,6 @@ div {
 
 #input {
   margin-top: 10px;
-}
-
-.result {
-  margin-top: 20px;
 }
 
 input, select {
@@ -150,7 +146,7 @@ input, select {
 }
 
 #act_inp {
-  width: 280px;
+  width: 260px;
 }
 
 #formula_select {
