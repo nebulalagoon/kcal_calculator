@@ -22,6 +22,9 @@ body > *
   color: $font-color
   box-shadow: 3px 3px 1px $shadow-color
 
+#navigation
+  background-color: $font-color
+
 h1 
   text-align: center
   font-weight: bold
@@ -55,6 +58,14 @@ button
 
 //hover, cursors etc.
 
+a:link, a:visited, a:hover, a:active
+  text-decoration: none
+  font-weight: bold
+  color: $primary-color
+
+#navigation:hover 
+  background-color: $accent-color
+
 button:hover 
   background-color: $accent-color
   cursor: pointer
@@ -82,6 +93,12 @@ body > *
   margin: 7px auto
   width: 90%
   max-width: 700px
+
+#navigation
+  width: 58px
+  padding: 3px 8px
+  margin-left: 5%
+  margin-top: 2%
 
 h1 
   font-size: 1.9rem
