@@ -97,8 +97,8 @@ body > * {
 #navigation {
   width: 70px;
   padding: 3px 8px;
-  margin-left: 5%;
-  margin-top: 2%;
+  margin-left: 0px;
+  margin-top: 0px;
 }
 
 h1 {
